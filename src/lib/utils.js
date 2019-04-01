@@ -31,15 +31,6 @@ function stringToInt(str) {
     return str | 0;
 }
 
-function pushnew(a, v) {
-    for (var i = 0; i < a.length; ++i) {
-        if (a[i] == v) {
-            return;
-        }
-    }
-    a.push(v);
-}
-
 function pusho(obj, k, v) {
     if (obj[k]) {
         obj[k].push(v);
@@ -73,15 +64,6 @@ function pick(a, b, c, d) {
     } else if (d) {
         return d;
     }
-}
-
-function pushnew(l, o) {
-    for (var i = 0; i < l.length; ++i) {
-        if (l[i] == o) {
-            return;
-        }
-    }
-    l.push(o);
 }
 
 function arrayEquals(a, b) {
@@ -471,8 +453,6 @@ export {
     resolveUrlToPage,
     shallowCopy,
     pusho,
-    pushnew,
-    pushnewo,
     arrayIndexOf,
     arrayEquals,
     pick,

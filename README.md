@@ -17,14 +17,23 @@ Two modes are supported: `urlReader` (from remote URLs that support HTTP Range r
 (from a local file). In both cases, the target must have been processed via tabix first, and the path to the index 
 file must be explicitly specified.
 
+
+If you are using the pre-built `dist/main.js` version, symbols can be accessed under the global `window.tabix` variable.
+ 
 ```js
-urlReader(url, indexUrl).then((reader) => {
-    reader.fetch((rows, error) => {
+tabix.urlReader(url, indexUrl).then((reader) => {
+    var callback = (rows, error) => {
         console.log(rows);
-    }); 
+    };
+    reader.fetch("1", 546375, 1046375, callback); 
 });
+```
+
+Or they can be imported via ES6 modules and then used as normal:
+```js
+import { blobReader } from 'tabix-reader';
 ```
  
 # Credits
-This is almost entirely extracted from the [BioDalliance](http://www.biodalliance.org/) genome viewer, 
+This code is adapted from the [BioDalliance](http://www.biodalliance.org/) genome viewer with minor changes, 
 making its data access capabilities easily available to other libraries. 

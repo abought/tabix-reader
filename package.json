@@ -11,7 +11,7 @@
   "scripts": {
     "lint": "eslint src/",
     "build": "parcel build src/main.js --experimental-scope-hoisting --global tabix",
-    "dev": "parcel src/main.js"
+    "dev": "parcel src/main.js --global tabix"
   },
   "dependencies": {
     "eslint": "^5.16.0",
