@@ -1,8 +1,8 @@
 {
-
   "name": "tabix-reader",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/main.js",
+  "module": "src/main.js",
   "author": "Thomas Dasmoth",
   "contributors": [
     "Andy Boughton <abought@umich.edu>"
@@ -10,10 +10,11 @@
   "license": "BSD",
   "scripts": {
     "lint": "eslint src/",
-    "build": "parcel build src/main.js",
+    "build": "parcel build src/main.js --experimental-scope-hoisting --global tabix",
     "dev": "parcel src/main.js"
   },
   "dependencies": {
+    "eslint": "^5.16.0",
     "jszlib": "dasmoth/jszlib"
   },
   "devDependencies": {
