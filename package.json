@@ -1,6 +1,6 @@
 {
   "name": "tabix-reader",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/main.js",
   "module": "src/main.js",
   "author": "Thomas Dasmoth",
@@ -15,10 +15,9 @@
   },
   "dependencies": {
     "eslint": "^5.16.0",
-    "jszlib": "dasmoth/jszlib"
+    "jszlib": "git+https://github.com/dasmoth/jszlib.git#4e562c7"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.12.3",
-    "yarn": "^1.22.0"
+    "parcel-bundler": "^1.12.3"
   }
 }
